@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="feat: add stack navigation">
+    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="feat: add Fonts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screen/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screen/Feed.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screen/MatchDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screen/MatchDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/stack.routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/stack.routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Feed.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/MatchDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +65,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="docs: add .idea files" />
     <MESSAGE value="feat: add stack navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add stack navigation" />
+    <MESSAGE value="feat: add Fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add Fonts" />
   </component>
 </project>

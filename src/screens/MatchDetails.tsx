@@ -1,7 +1,7 @@
 
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {useStack} from "../hooks/useNav";
+import {useStack} from "@hooks/useNav";
 
 export function MatchDetails() {
     const navigation = useStack()

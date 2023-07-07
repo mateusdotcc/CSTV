@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {useStack} from "../hooks/useNav";
+import {useStack} from "@hooks/useNav";
 
 export function Feed() {
     const navigation = useStack()

@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack'
-import {Feed} from "../screen/Feed";
-import {MatchDetails} from "../screen/MatchDetails";
+import {Feed} from "@screens/Feed";
+import {MatchDetails} from "@screens/MatchDetails";
 
 const Stack = createStackNavigator()
 
