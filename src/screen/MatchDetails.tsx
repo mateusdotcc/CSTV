@@ -26,9 +26,11 @@ const styles = StyleSheet.create({
     },
     text: {
         color: '#ffffff',
+        fontFamily: 'Roboto_700Bold'
     },
     textButton: {
-        color: '#161621'
+        color: '#161621',
+        fontFamily: 'Roboto_500Medium'
     },
     button: {
         marginTop: 20,
