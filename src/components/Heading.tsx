@@ -1,15 +1,20 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
 type Props = {
   text: string;
 };
 
-const Container = styled.View``;
+const Container = styled.View`
+  padding: 24px;
+`;
 
 const Title = styled.Text`
-  color: #ffffff;
-  font-size: 32px;
-  line-height: 40px;
+  ${({ theme }) => css`
+    color: ${theme.colors.white};
+    font-family: ${theme.fontFamily.medium};
+    font-size: ${theme.fontSize.xl}px;
+    line-height: 40px;
+  `}
 `;
 
 export function Heading({ text }: Props) {

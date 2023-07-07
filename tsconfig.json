@@ -4,6 +4,7 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
+      "@themes/*": ["./src/themes/*"],
       "@components/*": ["./src/components/*"],
       "@screens/*": ["./src/screens/*"],
       "@utils/*": ["./src/utils/*"],
@@ -12,5 +13,5 @@
       "@contexts/*": ["./src/contexts/*"],
       "@routes/*": ["./src/routes/*"]
     }
-  }
+  },
 }
