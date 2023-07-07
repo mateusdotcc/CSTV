@@ -8,6 +8,6 @@ type RootStackParamList = {
 
 type NavigationProps = StackNavigationProp<RootStackParamList>;
 
-export function useStack() {
+export function useNav() {
   return useNavigation<NavigationProps>();
 }

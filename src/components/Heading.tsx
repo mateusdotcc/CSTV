@@ -5,7 +5,9 @@ type Props = {
 };
 
 const Container = styled.View`
-  padding: 24px;
+  ${({ theme }) => css`
+    padding: ${theme.spaces.gutter}px;
+  `}
 `;
 
 const Title = styled.Text`

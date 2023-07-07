@@ -1,10 +1,10 @@
-import { View } from 'react-native';
 import { Heading } from '@components/Heading';
+import { Container } from '@components/Container';
 
 export function MatchDetails() {
   return (
-    <View>
+    <Container>
       <Heading text={'Match Details'} />
-    </View>
+    </Container>
   );
 }
