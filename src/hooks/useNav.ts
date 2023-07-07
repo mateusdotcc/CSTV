@@ -1,13 +1,13 @@
-import { StackNavigationProp } from "@react-navigation/stack"
+import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 
 type RootStackParamList = {
-    feed: {} | undefined
-    matchDetails: {} | undefined
-}
+  feed: {} | undefined;
+  matchDetails: {} | undefined;
+};
 
-type NavigationProps = StackNavigationProp<RootStackParamList>
+type NavigationProps = StackNavigationProp<RootStackParamList>;
 
 export function useStack() {
-   return useNavigation<NavigationProps>()
+  return useNavigation<NavigationProps>();
 }
