@@ -1,14 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useStack } from '@hooks/useNav';
+import { Heading } from '@components/Heading';
 
 export function Feed() {
   const navigation = useStack();
 
   return (
     <View style={styles.container}>
-      <StatusBar style="light" />
-      <Text style={styles.text}>FEED</Text>
+      <Heading text={'Feed'} />
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('matchDetails')}>
         <Text style={styles.textButton}>Go to Match Details</Text>
       </TouchableOpacity>

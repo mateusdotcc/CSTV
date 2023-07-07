@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="chore: update .idea files">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="chore: remove .idea folder">
+      <change afterPath="$PROJECT_DIR$/src/components/Heading.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Feed.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +36,7 @@
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="sortByType" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -51,7 +56,7 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/mateus.cc/Documents/workspace/CSTV/node_modules/prettier",
     "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/Users/mateus.cc/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/231.9161.29/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
+    "ts.external.directory.path": "/Users/mateus.cc/Documents/workspace/CSTV/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -75,6 +80,7 @@
     <MESSAGE value="style: update code format" />
     <MESSAGE value="style: add prettier" />
     <MESSAGE value="chore: update .idea files" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update .idea files" />
+    <MESSAGE value="chore: remove .idea folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: remove .idea folder" />
   </component>
 </project>
