@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="feat: add PlayerCard.tsx component and add List in Match Details">
-      <change afterPath="$PROJECT_DIR$/src/components/BackButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PlayerCard/PlayerCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerImage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerName.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerNickname.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PlayerCard/components/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Vs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/screenOptions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="chore: update Date component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Heading.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useNav.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useNav.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/stack.routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/stack.routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Feed.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/themes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,6 +97,7 @@
     <MESSAGE value="feat: add a default theme" />
     <MESSAGE value="feat: add CardMatch component and compositions" />
     <MESSAGE value="feat: add PlayerCard.tsx component and add List in Match Details" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add PlayerCard.tsx component and add List in Match Details" />
+    <MESSAGE value="chore: update Date component" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update Date component" />
   </component>
 </project>

@@ -37,14 +37,15 @@ const Footer = styled.View`
   gap: 8px;
 `;
 
-const Date = styled.View`
-  ${({ theme }) => css`
-    background-color: ${rgba(theme.colors.gray100, 0.2)};
+const Date = styled.View<{ isLive?: boolean }>`
+  ${({ theme, isLive }) => css`
+    background-color: ${isLive ? theme.colors.red : rgba(theme.colors.gray100, 0.2)};
     position: absolute;
     top: 0;
     right: 0;
     padding: 8px;
     border-bottom-left-radius: 16px;
+    min-width: 52px;
   `}
 `;
 
@@ -53,6 +54,7 @@ const DateText = styled.Text`
     color: ${theme.colors.white};
     font-family: ${theme.fontFamily.bold};
     font-size: ${theme.fontSize.sm}px;
+    text-align: center;
   `}
 `;
 
