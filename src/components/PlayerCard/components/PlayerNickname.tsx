@@ -10,7 +10,7 @@ const Title = styled.Text<Pick<Props, 'direction'>>`
   ${({ theme, direction }) => css`
     color: ${theme.colors.white};
     font-family: ${theme.fontFamily.bold};
-    font-size: ${theme.fontSize.lg};
+    font-size: ${theme.fontSize.lg}px;
     text-align: ${direction};
   `}
 `;
