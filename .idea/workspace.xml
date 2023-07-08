@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="fix: bundle">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/@types/env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/fetcher.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="chore: wip - Feed integrations">
+      <change afterPath="$PROJECT_DIR$/src/components/Placeholder.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Feed.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/styled.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/@types/styled.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +110,8 @@
     <MESSAGE value="feat: add PlayerCard.tsx component and add List in Match Details" />
     <MESSAGE value="chore: update Date component" />
     <MESSAGE value="fix: bundle" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: bundle" />
+    <MESSAGE value="chore: init integration with PandaScore API&#10;- add .env&#10;- axios&#10;- swr" />
+    <MESSAGE value="chore: wip - Feed integrations" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: wip - Feed integrations" />
   </component>
 </project>

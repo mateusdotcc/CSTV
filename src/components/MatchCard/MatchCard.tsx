@@ -5,6 +5,7 @@ import { TouchableOpacityProps } from 'react-native';
 import { useNav } from '@hooks/useNav';
 import { Vs } from '@components/Vs';
 import { MatchProps } from '@hooks/useGetMatches';
+import dayjs from 'dayjs';
 
 type Props = {
   match: MatchProps;
@@ -29,7 +30,6 @@ const Content = styled.View`
   flex-direction: row;
   align-self: center;
   align-items: center;
-  width: 177px;
 `;
 
 const Footer = styled.View`
@@ -69,23 +69,34 @@ export function MatchCard({ match }: Props) {
   return (
     <Container onPress={handlePress}>
       <Date>
-        <DateText>seg, 16:00</DateText>
+        <DateText>{dayjs(match?.begin_at).format('dd, hh:mm')}</DateText>
       </Date>
       <Content>
         <Avatar.Container>
-          <Avatar.Image size={'large'} />
+          <Avatar.Image
+            direction={'left'}
+            size={'large'}
+            image={match?.opponents?.[0]?.opponent?.image_url}
+          />
           <Avatar.Title title={match?.opponents?.[0]?.opponent?.name} />
         </Avatar.Container>
         <Vs />
         <Avatar.Container>
-          <Avatar.Image size={'large'} />
+          <Avatar.Image
+            direction={'right'}
+            size={'large'}
+            image={match?.opponents?.[1]?.opponent?.image_url}
+          />
           <Avatar.Title title={match?.opponents?.[1]?.opponent?.name} />
         </Avatar.Container>
       </Content>
       <Footer>
         <Avatar.Container position={'horizontal'}>
-          <Avatar.Image />
-          <Avatar.Title size={'sm'} title={`${match.league.name} / ${match.serie.name}`} />
+          <Avatar.Image image={match?.league?.image_url} />
+          <Avatar.Title
+            size={'sm'}
+            title={`${match.league.name}  ${match.serie.name ? ` | ${match?.serie?.name}` : ''}`}
+          />
         </Avatar.Container>
       </Footer>
     </Container>

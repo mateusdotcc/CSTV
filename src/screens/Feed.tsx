@@ -25,7 +25,7 @@ export function Feed() {
           data={matches}
           style={styles.list}
           showsVerticalScrollIndicator={false}
-          keyExtractor={(match) => match?.league_id?.toString()}
+          keyExtractor={(match, index) => `${match?.league_id}-${index}`}
           renderItem={({ item }) => <MatchCard match={item} />}
         />
       )}
