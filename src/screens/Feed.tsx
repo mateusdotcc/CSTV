@@ -1,10 +1,9 @@
 import { Heading } from '@components/Heading';
 import { Container } from '@components/Container';
 import { MatchCard } from '@components/MatchCard/MatchCard';
-import { FlatList, StyleSheet } from 'react-native';
+import { FlatList, StyleSheet, Text } from 'react-native';
 import { myTheme } from '@themes/index';
-
-const data = ['Card 1', 'Card 2', 'Card 3', 'Card 4', 'Card 5'];
+import { useGetMatches } from '@hooks/useGetMatches';
 
 const styles = StyleSheet.create({
   list: {
@@ -14,16 +13,22 @@ const styles = StyleSheet.create({
 });
 
 export function Feed() {
+  const { matches, isLoading } = useGetMatches();
+
   return (
     <Container>
       <Heading text={'Partidas'} />
-      <FlatList
-        data={data}
-        style={styles.list}
-        showsVerticalScrollIndicator={false}
-        keyExtractor={(item) => item}
-        renderItem={({ item }) => <MatchCard matches={item} />}
-      />
+      {isLoading ? (
+        <Text>Loading</Text>
+      ) : (
+        <FlatList
+          data={matches}
+          style={styles.list}
+          showsVerticalScrollIndicator={false}
+          keyExtractor={(match) => match?.league_id?.toString()}
+          renderItem={({ item }) => <MatchCard match={item} />}
+        />
+      )}
     </Container>
   );
 }

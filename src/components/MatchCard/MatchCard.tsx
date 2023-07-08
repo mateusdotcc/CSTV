@@ -4,9 +4,10 @@ import { Avatar } from '@components/MatchCard/components/Avatar';
 import { TouchableOpacityProps } from 'react-native';
 import { useNav } from '@hooks/useNav';
 import { Vs } from '@components/Vs';
+import { MatchProps } from '@hooks/useGetMatches';
 
 type Props = {
-  matches: string;
+  match: MatchProps;
 };
 
 const Container = styled.TouchableOpacity.attrs<TouchableOpacityProps>({
@@ -58,7 +59,7 @@ const DateText = styled.Text`
   `}
 `;
 
-export function MatchCard({ matches }: Props) {
+export function MatchCard({ match }: Props) {
   const navigation = useNav();
 
   function handlePress() {
@@ -73,18 +74,18 @@ export function MatchCard({ matches }: Props) {
       <Content>
         <Avatar.Container>
           <Avatar.Image size={'large'} />
-          <Avatar.Title title={'Time 1'} />
+          <Avatar.Title title={match?.opponents?.[0]?.opponent?.name} />
         </Avatar.Container>
         <Vs />
         <Avatar.Container>
           <Avatar.Image size={'large'} />
-          <Avatar.Title title={'Time 1'} />
+          <Avatar.Title title={match?.opponents?.[1]?.opponent?.name} />
         </Avatar.Container>
       </Content>
       <Footer>
         <Avatar.Container position={'horizontal'}>
           <Avatar.Image />
-          <Avatar.Title size={'sm'} title={matches} />
+          <Avatar.Title size={'sm'} title={`${match.league.name} / ${match.serie.name}`} />
         </Avatar.Container>
       </Footer>
     </Container>
