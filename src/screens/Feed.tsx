@@ -17,7 +17,6 @@ export function Feed() {
   return (
     <Container>
       <Heading text={'Partidas'} />
-
       <FlatList
         data={data}
         style={styles.list}

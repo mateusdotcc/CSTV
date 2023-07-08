@@ -6,7 +6,7 @@ type Props = {
 
 const Container = styled.View`
   ${({ theme }) => css`
-    padding: ${theme.spaces.gutter}px;
+    padding: 10px ${theme.spaces.gutter}px ${theme.spaces.gutter}px ${theme.spaces.gutter}px;
   `}
 `;
 

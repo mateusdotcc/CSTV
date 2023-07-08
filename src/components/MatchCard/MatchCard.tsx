@@ -3,6 +3,7 @@ import { rgba } from 'polished';
 import { Avatar } from '@components/MatchCard/components/Avatar';
 import { TouchableOpacityProps } from 'react-native';
 import { useNav } from '@hooks/useNav';
+import { Vs } from '@components/Vs';
 
 type Props = {
   matches: string;
@@ -34,15 +35,6 @@ const Footer = styled.View`
   flex-direction: row;
   align-items: center;
   gap: 8px;
-`;
-
-const Vs = styled.Text`
-  ${({ theme }) => css`
-    color: ${rgba(theme.colors.gray100, 0.5)};
-    font-size: ${theme.fontSize.md}px;
-    margin-left: 20px;
-    margin-right: 20px;
-  `}
 `;
 
 const Date = styled.View`
@@ -81,7 +73,7 @@ export function MatchCard({ matches }: Props) {
           <Avatar.Image size={'large'} />
           <Avatar.Title title={'Time 1'} />
         </Avatar.Container>
-        <Vs>VS</Vs>
+        <Vs />
         <Avatar.Container>
           <Avatar.Image size={'large'} />
           <Avatar.Title title={'Time 1'} />

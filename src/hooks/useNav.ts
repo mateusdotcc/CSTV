@@ -1,7 +1,7 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 
-type RootStackParamList = {
+export type RootStackParamList = {
   feed: {} | undefined;
   matchDetails: {} | undefined;
 };
