@@ -4,7 +4,7 @@ import { myTheme } from '@themes/index';
 import { Heading } from '@components/Heading';
 import { Container } from '@components/Container';
 import { MatchCard } from '@components/MatchCard/MatchCard';
-import { useGetMatches } from '@hooks/useGetMatches';
+import { useGetMatches } from '@hooks/services/useGetMatches';
 import { Loading } from '@components/Loading';
 import { RefreshLoader } from '@components/RefreshLoader';
 import { useFirstRender } from '@hooks/useFirstRender';

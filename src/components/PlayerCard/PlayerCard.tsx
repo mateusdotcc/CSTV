@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import { Player } from '@components/PlayerCard/components';
-import { PlayerProps } from '@hooks/useGetTeam';
+import { PlayerProps } from '@hooks/services/useGetTeam';
 
 type Props = {
   player: PlayerProps;

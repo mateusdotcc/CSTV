@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 import { Avatar } from '@components/MatchCard/components/Avatar';
 import { useNav } from '@hooks/useNav';
 import { Vs } from '@components/Vs';
-import { MatchProps } from '@hooks/useGetMatches';
+import { MatchProps } from '@hooks/services/useGetMatches';
 
 type Props = {
   match: MatchProps;

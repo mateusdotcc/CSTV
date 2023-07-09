@@ -8,8 +8,8 @@ import { RootStackParamList } from '@hooks/useNav';
 import { BackButton } from '@components/BackButton';
 import { Avatar } from '@components/MatchCard/components/Avatar';
 import { PlayerCard } from '@components/PlayerCard/PlayerCard';
-import { MatchProps } from '@hooks/useGetMatches';
-import { useGetTeam } from '@hooks/useGetTeam';
+import { MatchProps } from '@hooks/services/useGetMatches';
+import { useGetTeam } from '@hooks/services/useGetTeam';
 import { Vs } from '@components/Vs';
 import { Loading } from '@components/Loading';
 

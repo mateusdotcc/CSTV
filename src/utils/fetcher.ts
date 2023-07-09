@@ -6,5 +6,5 @@ export const fetcher = (url: string) => {
   return axios
     .get(url, { headers: { Authorization: auth } })
     .then((res) => res.data)
-    .catch((err) => console.log(err));
+    .catch((err) => console.warn(err));
 };

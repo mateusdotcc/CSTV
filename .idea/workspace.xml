@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="feat: add pull to refresh in Feed.tsx">
-      <change afterPath="$PROJECT_DIR$/src/hooks/useFirstRender.ts" afterDir="false" />
+    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="chore: update beginAt status and improve first render loader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayerCard/PlayerCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerCard/PlayerCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/services/useGetMatches.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetTeam.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/services/useGetTeam.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Feed.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/fetcher.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetcher.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +73,11 @@
       <recent name="$PROJECT_DIR$/src/components/Avatar" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/hooks/services" />
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/@types" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/components/MatchCard/components/Avatar" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -114,6 +116,7 @@
     <MESSAGE value="feat: add SplashScreen with loading fonts" />
     <MESSAGE value="chore: update assets" />
     <MESSAGE value="feat: add pull to refresh in Feed.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add pull to refresh in Feed.tsx" />
+    <MESSAGE value="chore: update beginAt status and improve first render loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update beginAt status and improve first render loader" />
   </component>
 </project>
