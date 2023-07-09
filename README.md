@@ -31,6 +31,8 @@ $ cd CSTV
 Please first create a free account in [PandaScore](https://app.pandascore.co/signup)
 and copy **your access token** to your **.env** file in `PANDA_API_KEY=code_here`
 
+Copy the `.env.example` file and rename to `.env` and paste your access token.
+
 ### Run Project: 
 
 ```bash
