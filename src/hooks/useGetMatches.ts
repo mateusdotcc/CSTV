@@ -35,12 +35,13 @@ function removeEmptyData(payload?: MatchProps[]) {
 }
 
 export function useGetMatches() {
-  const endpoint = 'https://api.pandascore.co/csgo/matches?sort=&page=1&per_page=10';
-  const { data, error, isLoading } = useSWR<MatchProps[]>(endpoint, fetcher);
+  const endpoint = 'https://api.pandascore.co/csgo/matches?page=1&per_page=10';
+  const { data, error, isLoading, mutate } = useSWR<MatchProps[]>(endpoint, fetcher);
 
   return {
     matches: removeEmptyData(data),
     isLoading,
     isError: error,
+    mutate,
   };
 }
