@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="refactor: add services hooks">
+    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="chore: update Date time and add UTC, and locale">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +112,7 @@
     <MESSAGE value="feat: add pull to refresh in Feed.tsx" />
     <MESSAGE value="chore: update beginAt status and improve first render loader" />
     <MESSAGE value="refactor: add services hooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: add services hooks" />
+    <MESSAGE value="chore: update Date time and add UTC, and locale" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update Date time and add UTC, and locale" />
   </component>
 </project>
