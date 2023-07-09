@@ -13,8 +13,9 @@ type Props = {
 
 export function MatchCard({ match }: Props) {
   const navigation = useNav();
-
   const league = `${match.league.name} ${match.serie.name ? ` | ${match?.serie?.name}` : ''}`;
+  const isRunning = match?.status === 'running';
+  const beginAt = dayjs(match?.begin_at).format('ddd, hh:mm');
 
   function handlePress() {
     navigation.navigate('matchDetails', {
@@ -26,8 +27,8 @@ export function MatchCard({ match }: Props) {
 
   return (
     <Container onPress={handlePress}>
-      <Date>
-        <DateText>{dayjs(match?.begin_at).format('ddd, hh:mm')}</DateText>
+      <Date isLive={isRunning}>
+        <DateText>{isRunning ? 'AGORA' : beginAt}</DateText>
       </Date>
       <Content>
         <Avatar.Container>

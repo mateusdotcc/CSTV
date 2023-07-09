@@ -7,13 +7,16 @@ import { MatchCard } from '@components/MatchCard/MatchCard';
 import { useGetMatches } from '@hooks/useGetMatches';
 import { Loading } from '@components/Loading';
 import { RefreshLoader } from '@components/RefreshLoader';
+import { useFirstRender } from '@hooks/useFirstRender';
 
 export function Feed() {
-  const { matches, isLoading, mutate } = useGetMatches();
+  const isFirstRender = useFirstRender();
+  const { matches, isLoading, mutate, setPage } = useGetMatches();
   const [refreshing, setRefreshing] = useState(false);
 
   async function onRefresh() {
     setRefreshing(true);
+    setPage((prev) => prev + 1);
     await mutate();
     setRefreshing(false);
   }
@@ -21,21 +24,19 @@ export function Feed() {
   return (
     <Container>
       <Heading text={'Partidas'} />
-      {isLoading ? (
+      {isLoading && isFirstRender ? (
         <Loading />
       ) : (
-        <>
-          <FlatList
-            data={matches}
-            style={styles.list}
-            showsVerticalScrollIndicator={false}
-            keyExtractor={(match, index) => `${match?.league_id}-${index}`}
-            refreshing={refreshing}
-            onRefresh={onRefresh}
-            refreshControl={<RefreshLoader refreshing={refreshing} onRefresh={onRefresh} />}
-            renderItem={({ item }) => <MatchCard match={item} />}
-          />
-        </>
+        <FlatList
+          data={matches}
+          style={styles.list}
+          showsVerticalScrollIndicator={false}
+          keyExtractor={(match, index) => `${match?.league_id}-${index}`}
+          refreshing={refreshing}
+          onRefresh={onRefresh}
+          refreshControl={<RefreshLoader refreshing={refreshing} onRefresh={onRefresh} />}
+          renderItem={({ item }) => <MatchCard match={item} />}
+        />
       )}
     </Container>
   );

@@ -96,7 +96,7 @@ const Day = styled.Text`
     font-family: ${theme.fontFamily.bold};
     font-size: ${theme.fontSize.md}px;
     color: ${theme.colors.white};
-    margin: 20px 0;
+    margin: 30px 0;
     text-align: center;
   `}
 `;
