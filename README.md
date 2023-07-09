@@ -16,7 +16,7 @@ data from PandaScore API facilitating the refetch and loading status.
 
 "Styled Components" to style the layout and hooks to bring the data from API.
 
-### Getting Started
+### Getting Started:
 
 ```bash
 # First, clone this repository:
@@ -24,7 +24,16 @@ $ git clone https://github.com/mateusdotcc/CSTV.git
 
 # Access the project folder in the / cmd terminal:
 $ cd CSTV 
+```
 
+### PandaScore API:
+
+Please first create a free account in [PandaScore](https://app.pandascore.co/signup)
+and copy **your access token** to your **.env** file in `PANDA_API_KEY=code_here`
+
+### Run Project: 
+
+```bash
 # Minimum Node.js 14LTS or greater installed
 
 # Install the Expo CLI
@@ -36,9 +45,10 @@ $ npm install
 # Open an iPhone/Android simulator phone
 
 # Run the application in development mode:
+# check the PandaScore API step above.
 $ npx expo start
 
-# Check the terminal commands to run, update, and debug the application
+# Check the terminal commands to run, update, and debug the application using Expo
 ```
 
 ### App Requirements:
@@ -71,3 +81,13 @@ $ npx expo start
 - [ ] Code ready to run in Android
 - [ ] Pagination support
 - [ ] Responsiveness
+
+### Connect with me:
+
+<a href="https://www.linkedin.com/in/mateusdotcc/">
+  <img alt="Connect with me" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
+### Check out other React Native projects I've worked on:
+
+- [Voz das Comunidades](https://play.google.com/store/apps/details?id=br.com.vozdascomunidades)
