@@ -1,9 +1,10 @@
-import { FlatList, StyleSheet, Text } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 import { myTheme } from '@themes/index';
 import { Heading } from '@components/Heading';
 import { Container } from '@components/Container';
 import { MatchCard } from '@components/MatchCard/MatchCard';
 import { useGetMatches } from '@hooks/useGetMatches';
+import { Loading } from '@components/Loading';
 
 export function Feed() {
   const { matches, isLoading } = useGetMatches();
@@ -12,9 +13,10 @@ export function Feed() {
     <Container>
       <Heading text={'Partidas'} />
       {isLoading ? (
-        <Text>Loading</Text>
+        <Loading />
       ) : (
         <FlatList
+          refreshing={isLoading}
           data={matches}
           style={styles.list}
           showsVerticalScrollIndicator={false}

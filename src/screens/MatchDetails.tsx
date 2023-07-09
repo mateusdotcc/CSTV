@@ -11,14 +11,19 @@ import { PlayerCard } from '@components/PlayerCard/PlayerCard';
 import { MatchProps } from '@hooks/useGetMatches';
 import { useGetTeam } from '@hooks/useGetTeam';
 import { Vs } from '@components/Vs';
+import { Loading } from '@components/Loading';
 
 interface Props extends NativeStackScreenProps<RootStackParamList, 'matchDetails'> {}
 
 export function MatchDetails({ navigation, route }: Props) {
   const { league, begin_at: beginAt, opponents } = route.params as MatchProps;
 
-  const { team: leftTeam } = useGetTeam({ teamId: opponents[0].opponent.id });
-  const { team: rightTeam } = useGetTeam({ teamId: opponents[1].opponent.id });
+  const { team: leftTeam, isLoading: isLoadingLeftTeam } = useGetTeam({
+    teamId: opponents[0].opponent.id,
+  });
+  const { team: rightTeam, isLoading: isLoadingRightTeam } = useGetTeam({
+    teamId: opponents[1].opponent.id,
+  });
 
   useEffect(function setNavigationHeader() {
     navigation.setOptions({
@@ -26,6 +31,10 @@ export function MatchDetails({ navigation, route }: Props) {
       headerLeft: (props) => <BackButton {...props} />,
     });
   }, []);
+
+  if (isLoadingLeftTeam && isLoadingRightTeam) {
+    return <Loading />;
+  }
 
   return (
     <Container>
@@ -44,6 +53,7 @@ export function MatchDetails({ navigation, route }: Props) {
           <Avatar.Title title={opponents?.[1]?.opponent?.name} />
         </Avatar.Container>
       </Header>
+      {}
       <Day>{dayjs(beginAt).format('dddd, hh:mm')}</Day>
       <ScrollView contentContainerStyle={styles.scrollList}>
         <FlatList

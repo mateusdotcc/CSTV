@@ -28,6 +28,6 @@ const Container = styled.View`
   padding-top: 5px;
 `;
 
-const BoxInfo = styled.View<{}>`
+const BoxInfo = styled.View`
   flex-direction: column;
 `;
