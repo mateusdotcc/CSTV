@@ -57,6 +57,7 @@ export function MatchDetails({ navigation, route }: Props) {
       <Day>{dayjs(beginAt).format('dddd, hh:mm')}</Day>
       <ScrollView contentContainerStyle={styles.scrollList}>
         <FlatList
+          style={styles.list}
           data={leftTeam?.players}
           scrollEnabled={false}
           showsVerticalScrollIndicator={false}
@@ -64,6 +65,7 @@ export function MatchDetails({ navigation, route }: Props) {
           renderItem={({ item }) => <PlayerCard direction={'right'} player={item} />}
         />
         <FlatList
+          style={styles.list}
           data={rightTeam?.players}
           scrollEnabled={false}
           showsVerticalScrollIndicator={false}
@@ -80,6 +82,9 @@ const styles = StyleSheet.create({
     flex: 1,
     gap: 13,
     flexDirection: 'row',
+  },
+  list: {
+    maxWidth: '50%',
   },
 });
 

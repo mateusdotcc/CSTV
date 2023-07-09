@@ -7,6 +7,10 @@ import { useNav } from '@hooks/useNav';
 import { Vs } from '@components/Vs';
 import { MatchProps } from '@hooks/services/useGetMatches';
 
+require('dayjs/locale/pt-br');
+let utc = require('dayjs/plugin/utc');
+dayjs.extend(utc).locale('pt-br');
+
 type Props = {
   match: MatchProps;
 };
@@ -15,7 +19,8 @@ export function MatchCard({ match }: Props) {
   const navigation = useNav();
   const league = `${match.league.name} ${match.serie.name ? ` | ${match?.serie?.name}` : ''}`;
   const isRunning = match?.status === 'running';
-  const beginAt = dayjs(match?.begin_at).format('ddd, hh:mm');
+  // @ts-ignore
+  const beginAt = dayjs.utc(match?.begin_at).format('ddd, hh:mm');
 
   function handlePress() {
     navigation.navigate('matchDetails', {
@@ -104,5 +109,6 @@ const DateText = styled.Text`
     font-family: ${theme.fontFamily.bold};
     font-size: ${theme.fontSize.sm}px;
     text-align: center;
+    text-transform: capitalize;
   `}
 `;
