@@ -1,3 +1,7 @@
+<div align="center">
+  https://github.com/mateusdotcc/CSTV/assets/1136951/e6d94f71-53e3-4933-803b-fc1721b923f6
+</div>
+
 <h1 align="center">
   React Native - CSTV
 </h1>
