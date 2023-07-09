@@ -1,15 +1,62 @@
+import { TouchableOpacityProps } from 'react-native';
 import styled, { css } from 'styled-components/native';
 import { rgba } from 'polished';
+import dayjs from 'dayjs';
 import { Avatar } from '@components/MatchCard/components/Avatar';
-import { TouchableOpacityProps } from 'react-native';
 import { useNav } from '@hooks/useNav';
 import { Vs } from '@components/Vs';
 import { MatchProps } from '@hooks/useGetMatches';
-import dayjs from 'dayjs';
 
 type Props = {
   match: MatchProps;
 };
+
+export function MatchCard({ match }: Props) {
+  const navigation = useNav();
+
+  const league = `${match.league.name} ${match.serie.name ? ` | ${match?.serie?.name}` : ''}`;
+
+  function handlePress() {
+    navigation.navigate('matchDetails', {
+      league: { name: league },
+      beginAt: match?.begin_at,
+      opponents: match?.opponents,
+    });
+  }
+
+  return (
+    <Container onPress={handlePress}>
+      <Date>
+        <DateText>{dayjs(match?.begin_at).format('ddd, hh:mm')}</DateText>
+      </Date>
+      <Content>
+        <Avatar.Container>
+          <Avatar.Image
+            direction={'left'}
+            size={'large'}
+            image={match?.opponents?.[0]?.opponent?.image_url}
+          />
+          <Avatar.Title title={match?.opponents?.[0]?.opponent?.name} />
+        </Avatar.Container>
+        <Vs />
+        <Avatar.Container>
+          <Avatar.Image
+            size={'large'}
+            direction={'right'}
+            image={match?.opponents?.[1]?.opponent?.image_url}
+          />
+          <Avatar.Title title={match?.opponents?.[1]?.opponent?.name} />
+        </Avatar.Container>
+      </Content>
+      <Footer>
+        <Avatar.Container position={'horizontal'}>
+          <Avatar.Image image={match?.league?.image_url} />
+          <Avatar.Title size={'sm'} title={league} />
+        </Avatar.Container>
+      </Footer>
+    </Container>
+  );
+}
 
 const Container = styled.TouchableOpacity.attrs<TouchableOpacityProps>({
   activeOpacity: 0.85,
@@ -58,50 +105,3 @@ const DateText = styled.Text`
     text-align: center;
   `}
 `;
-
-export function MatchCard({ match }: Props) {
-  const navigation = useNav();
-
-  const league = `${match.league.name} ${match.serie.name ? ` | ${match?.serie?.name}` : ''}`;
-
-  function handlePress() {
-    navigation.navigate('matchDetails', {
-      league: { name: league },
-      beginAt: match?.begin_at,
-      opponents: match?.opponents,
-    });
-  }
-
-  return (
-    <Container onPress={handlePress}>
-      <Date>
-        <DateText>{dayjs(match?.begin_at).format('ddd, hh:mm')}</DateText>
-      </Date>
-      <Content>
-        <Avatar.Container>
-          <Avatar.Image
-            direction={'left'}
-            size={'large'}
-            image={match?.opponents?.[0]?.opponent?.image_url}
-          />
-          <Avatar.Title title={match?.opponents?.[0]?.opponent?.name} />
-        </Avatar.Container>
-        <Vs />
-        <Avatar.Container>
-          <Avatar.Image
-            size={'large'}
-            direction={'right'}
-            image={match?.opponents?.[1]?.opponent?.image_url}
-          />
-          <Avatar.Title title={match?.opponents?.[1]?.opponent?.name} />
-        </Avatar.Container>
-      </Content>
-      <Footer>
-        <Avatar.Container position={'horizontal'}>
-          <Avatar.Image image={match?.league?.image_url} />
-          <Avatar.Title size={'sm'} title={league} />
-        </Avatar.Container>
-      </Footer>
-    </Container>
-  );
-}

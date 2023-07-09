@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components/native';
 import { ReactNode } from 'react';
+import styled, { css } from 'styled-components/native';
 
 export type DirectionProps = 'left' | 'right';
 
@@ -7,6 +7,14 @@ type Props = {
   children: ReactNode;
   direction: DirectionProps;
 };
+
+export function PlayerContainer({ children, direction }: Props) {
+  return (
+    <Container direction={direction}>
+      <Wrapper>{children}</Wrapper>
+    </Container>
+  );
+}
 
 const Container = styled.View<Pick<Props, 'direction'>>`
   ${({ theme, direction }) => css`
@@ -39,11 +47,3 @@ const Wrapper = styled.View`
   position: relative;
   top: -12px;
 `;
-
-export function PlayerContainer({ children, direction }: Props) {
-  return (
-    <Container direction={direction}>
-      <Wrapper>{children}</Wrapper>
-    </Container>
-  );
-}

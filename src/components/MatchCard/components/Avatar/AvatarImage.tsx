@@ -1,6 +1,6 @@
 import { Image } from 'expo-image';
 import styled, { css } from 'styled-components/native';
-import { Placeholder } from '@components/Placeholder';
+import { Placeholder } from '../../../../assets/Placeholder';
 
 type Props = {
   size?: 'small' | 'large';
@@ -8,22 +8,8 @@ type Props = {
   image?: string | null;
 };
 
-type ContainerProps = Pick<Props, 'size'> & {
-  hasImage: boolean;
-};
-
 const sm = '16px';
 const lg = '60px';
-
-const Container = styled.View<ContainerProps>`
-  ${({ theme, size, hasImage }) => css`
-    background-color: ${hasImage ? 'transparent' : theme.colors.gray100};
-    width: ${size === 'small' ? `${sm}` : `${lg}`};
-    height: ${size === 'small' ? `${sm}` : `${lg}`};
-    border-radius: 50%;
-    overflow: hidden;
-  `}
-`;
 
 export function AvatarImage({ image, size = 'small' }: Props) {
   const hasImage = Boolean(image);
@@ -43,3 +29,17 @@ export function AvatarImage({ image, size = 'small' }: Props) {
     </Container>
   );
 }
+
+type ContainerProps = Pick<Props, 'size'> & {
+  hasImage: boolean;
+};
+
+const Container = styled.View<ContainerProps>`
+  ${({ theme, size, hasImage }) => css`
+    background-color: ${hasImage ? 'transparent' : theme.colors.gray100};
+    width: ${size === 'small' ? `${sm}` : `${lg}`};
+    height: ${size === 'small' ? `${sm}` : `${lg}`};
+    border-radius: 50%;
+    overflow: hidden;
+  `}
+`;

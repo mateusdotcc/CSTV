@@ -6,7 +6,7 @@ export type RootStackParamList = {
   matchDetails: {} | undefined;
 };
 
-type NavigationProps = StackNavigationProp<RootStackParamList>;
+interface NavigationProps extends StackNavigationProp<RootStackParamList> {}
 
 export function useNav() {
   return useNavigation<NavigationProps>();

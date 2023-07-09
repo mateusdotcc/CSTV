@@ -10,13 +10,13 @@ type Props = {
 
 const defaultSize = 'md';
 
+export function AvatarTitle({ title, size = defaultSize }: Props) {
+  return <Title size={size}>{title}</Title>;
+}
+
 const Title = styled.Text<Pick<Props, 'size'>>`
   ${({ theme, size = defaultSize }) => css`
     color: ${theme.colors.white};
     font-size: ${theme.fontSize[size]}px;
   `}
 `;
-
-export function AvatarTitle({ title, size = defaultSize }: Props) {
-  return <Title size={size}>{title}</Title>;
-}

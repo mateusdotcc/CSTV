@@ -7,16 +7,6 @@ type Props = {
   direction: 'left' | 'right';
 };
 
-const Container = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 5px;
-`;
-
-const BoxInfo = styled.View<{}>`
-  flex-direction: column;
-`;
-
 export function PlayerCard({ player, direction }: Props) {
   return (
     <Container>
@@ -31,3 +21,13 @@ export function PlayerCard({ player, direction }: Props) {
     </Container>
   );
 }
+
+const Container = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5px;
+`;
+
+const BoxInfo = styled.View<{}>`
+  flex-direction: column;
+`;

@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components/native';
 import { rgba } from 'polished';
 
+export function Vs() {
+  return <VS>VS</VS>;
+}
+
 const VS = styled.Text`
   ${({ theme }) => css`
     color: ${rgba(theme.colors.gray100, 0.5)};
@@ -9,7 +13,3 @@ const VS = styled.Text`
     margin-right: 20px;
   `}
 `;
-
-export function Vs() {
-  return <VS>VS</VS>;
-}

@@ -6,6 +6,10 @@ type Props = {
   direction: DirectionProps;
 };
 
+export function PlayerNickname({ title, direction }: Props) {
+  return <Title direction={direction}>{title}</Title>;
+}
+
 const Title = styled.Text<Pick<Props, 'direction'>>`
   ${({ theme, direction }) => css`
     color: ${theme.colors.white};
@@ -14,7 +18,3 @@ const Title = styled.Text<Pick<Props, 'direction'>>`
     text-align: ${direction};
   `}
 `;
-
-export function PlayerNickname({ title, direction }: Props) {
-  return <Title direction={direction}>{title}</Title>;
-}

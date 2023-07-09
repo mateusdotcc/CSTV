@@ -1,8 +1,8 @@
 import { TouchableOpacity } from 'react-native';
-import { HeaderBackButtonProps } from '@react-navigation/native-stack/lib/typescript/src/types';
 import { Path, Svg } from 'react-native-svg';
+import { HeaderBackButtonProps } from '@react-navigation/native-stack/lib/typescript/src/types';
 
-type Props = HeaderBackButtonProps;
+interface Props extends HeaderBackButtonProps {}
 
 export function BackButton(props: Props) {
   return (

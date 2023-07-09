@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components/native';
 import { ReactNode } from 'react';
+import styled, { css } from 'styled-components/native';
 
 type Props = {
   children: ReactNode;

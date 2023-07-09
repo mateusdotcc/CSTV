@@ -1,10 +1,14 @@
-import styled, { css } from 'styled-components/native';
 import { ReactNode } from 'react';
+import styled, { css } from 'styled-components/native';
 
 type Props = {
   children: ReactNode;
   position?: 'vertical' | 'horizontal';
 };
+
+export function AvatarContainer({ children, position = 'vertical' }: Props) {
+  return <Container position={position}>{children}</Container>;
+}
 
 const Container = styled.View<Pick<Props, 'position'>>`
   ${({ position }) => css`
@@ -23,7 +27,3 @@ const Container = styled.View<Pick<Props, 'position'>>`
     `}
   `}
 `;
-
-export function AvatarContainer({ children, position = 'vertical' }: Props) {
-  return <Container position={position}>{children}</Container>;
-}
