@@ -40,6 +40,5 @@ const Container = styled.View<ContainerProps>`
     width: ${size === 'small' ? `${sm}` : `${lg}`};
     height: ${size === 'small' ? `${sm}` : `${lg}`};
     border-radius: 50%;
-    overflow: hidden;
   `}
 `;

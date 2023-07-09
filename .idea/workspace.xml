@@ -4,26 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="feat: add getTeam and update MatchDetails.tsx screen">
+    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="refactor: imports, styled components position func, and types">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/@types/styled.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/@types/styled.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BackButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BackButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Heading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarImage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarTitle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Placeholder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Placeholder.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PlaceholderUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/PlaceholderUser.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PlayerCard/PlayerCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerCard/PlayerCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerImage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerName.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerName.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerNickname.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerNickname.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Vs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Vs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useNav.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useNav.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Feed.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +108,7 @@
     <MESSAGE value="chore: init integration with PandaScore API&#10;- add .env&#10;- axios&#10;- swr" />
     <MESSAGE value="chore: wip - Feed integrations" />
     <MESSAGE value="feat: add getTeam and update MatchDetails.tsx screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add getTeam and update MatchDetails.tsx screen" />
+    <MESSAGE value="refactor: imports, styled components position func, and types" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: imports, styled components position func, and types" />
   </component>
 </project>
