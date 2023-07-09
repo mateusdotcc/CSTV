@@ -1,15 +1,77 @@
 import { useEffect } from 'react';
-import { Container } from '@components/Container';
+import { FlatList, ScrollView, StyleSheet } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import styled, { css } from 'styled-components/native';
+import dayjs from 'dayjs';
+import { Container } from '@components/Container';
 import { RootStackParamList } from '@hooks/useNav';
 import { BackButton } from '@components/BackButton';
 import { Avatar } from '@components/MatchCard/components/Avatar';
-import { Vs } from '@components/Vs';
-import styled, { css } from 'styled-components/native';
-import { FlatList, StyleSheet } from 'react-native';
 import { PlayerCard } from '@components/PlayerCard/PlayerCard';
+import { MatchProps } from '@hooks/useGetMatches';
+import { useGetTeam } from '@hooks/useGetTeam';
+import { Vs } from '@components/Vs';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'matchDetails'>;
+interface Props extends NativeStackScreenProps<RootStackParamList, 'matchDetails'> {}
+
+export function MatchDetails({ navigation, route }: Props) {
+  const { league, begin_at: beginAt, opponents } = route.params as MatchProps;
+
+  const { team: leftTeam } = useGetTeam({ teamId: opponents[0].opponent.id });
+  const { team: rightTeam } = useGetTeam({ teamId: opponents[1].opponent.id });
+
+  useEffect(function setNavigationHeader() {
+    navigation.setOptions({
+      title: league.name,
+      headerLeft: (props) => <BackButton {...props} />,
+    });
+  }, []);
+
+  return (
+    <Container>
+      <Header>
+        <Avatar.Container>
+          <Avatar.Image size={'large'} image={opponents?.[0]?.opponent?.image_url} />
+          <Avatar.Title title={opponents?.[0]?.opponent?.name} />
+        </Avatar.Container>
+        <Vs />
+        <Avatar.Container>
+          <Avatar.Image
+            size={'large'}
+            direction={'right'}
+            image={opponents?.[1]?.opponent?.image_url}
+          />
+          <Avatar.Title title={opponents?.[1]?.opponent?.name} />
+        </Avatar.Container>
+      </Header>
+      <Day>{dayjs(beginAt).format('dddd, hh:mm')}</Day>
+      <ScrollView contentContainerStyle={styles.scrollList}>
+        <FlatList
+          data={leftTeam?.players}
+          scrollEnabled={false}
+          showsVerticalScrollIndicator={false}
+          keyExtractor={(player, index) => `${player?.id}-${index}`}
+          renderItem={({ item }) => <PlayerCard direction={'right'} player={item} />}
+        />
+        <FlatList
+          data={rightTeam?.players}
+          scrollEnabled={false}
+          showsVerticalScrollIndicator={false}
+          keyExtractor={(player, index) => `${player?.id}-${index}`}
+          renderItem={({ item }) => <PlayerCard direction={'left'} player={item} />}
+        />
+      </ScrollView>
+    </Container>
+  );
+}
+
+const styles = StyleSheet.create({
+  scrollList: {
+    flex: 1,
+    gap: 13,
+    flexDirection: 'row',
+  },
+});
 
 const Header = styled.View`
   flex-direction: row;
@@ -28,44 +90,3 @@ const Day = styled.Text`
     text-align: center;
   `}
 `;
-
-const styles = StyleSheet.create({
-  list: {
-    paddingTop: 6,
-  },
-});
-
-const data = ['Nickname 1', 'Nickname 2', 'Nickname 3', 'Nickname 4', 'Nickname 5', 'Nickname 6'];
-
-export function MatchDetails({ navigation }: Props) {
-  useEffect(function setNavigationHeader() {
-    navigation.setOptions({
-      title: 'League + serie',
-      headerLeft: (props) => <BackButton {...props} />,
-    });
-  }, []);
-
-  return (
-    <Container>
-      <Header>
-        <Avatar.Container>
-          <Avatar.Image size={'large'} />
-          <Avatar.Title title={'Time 1'} />
-        </Avatar.Container>
-        <Vs />
-        <Avatar.Container>
-          <Avatar.Image size={'large'} />
-          <Avatar.Title title={'Time 2'} />
-        </Avatar.Container>
-      </Header>
-      <Day>Hoje, 21:00</Day>
-      <FlatList
-        data={data}
-        style={styles.list}
-        showsVerticalScrollIndicator={false}
-        keyExtractor={(item) => item}
-        renderItem={({ item }) => <PlayerCard player={item} />}
-      />
-    </Container>
-  );
-}

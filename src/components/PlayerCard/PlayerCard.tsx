@@ -1,36 +1,32 @@
 import styled from 'styled-components/native';
 import { Player } from '@components/PlayerCard/components';
+import { PlayerProps } from '@hooks/useGetTeam';
 
 type Props = {
-  player: string;
+  player: PlayerProps;
+  direction: 'left' | 'right';
 };
 
 const Container = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  gap: 13px;
+  padding-top: 5px;
 `;
 
 const BoxInfo = styled.View<{}>`
   flex-direction: column;
 `;
 
-export function PlayerCard({ player }: Props) {
+export function PlayerCard({ player, direction }: Props) {
   return (
     <Container>
-      <Player.Container direction={'right'}>
+      <Player.Container direction={direction}>
+        {direction === 'left' && <Player.Image image={player?.image_url} />}
         <BoxInfo>
-          <Player.Nickname direction={'right'} title={player} />
-          <Player.Name direction={'right'} title={'Nome do Jogador'} />
+          <Player.Nickname direction={direction} title={player?.name} />
+          <Player.Name direction={direction} title={player?.first_name} />
         </BoxInfo>
-        <Player.Image />
-      </Player.Container>
-      <Player.Container direction={'left'}>
-        <Player.Image />
-        <BoxInfo>
-          <Player.Nickname direction={'left'} title={player} />
-          <Player.Name direction={'left'} title={'Nome do Jogador'} />
-        </BoxInfo>
+        {direction === 'right' && <Player.Image image={player?.image_url} />}
       </Player.Container>
     </Container>
   );

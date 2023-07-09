@@ -62,14 +62,20 @@ const DateText = styled.Text`
 export function MatchCard({ match }: Props) {
   const navigation = useNav();
 
+  const league = `${match.league.name} ${match.serie.name ? ` | ${match?.serie?.name}` : ''}`;
+
   function handlePress() {
-    navigation.navigate('matchDetails');
+    navigation.navigate('matchDetails', {
+      league: { name: league },
+      beginAt: match?.begin_at,
+      opponents: match?.opponents,
+    });
   }
 
   return (
     <Container onPress={handlePress}>
       <Date>
-        <DateText>{dayjs(match?.begin_at).format('dd, hh:mm')}</DateText>
+        <DateText>{dayjs(match?.begin_at).format('ddd, hh:mm')}</DateText>
       </Date>
       <Content>
         <Avatar.Container>
@@ -83,8 +89,8 @@ export function MatchCard({ match }: Props) {
         <Vs />
         <Avatar.Container>
           <Avatar.Image
-            direction={'right'}
             size={'large'}
+            direction={'right'}
             image={match?.opponents?.[1]?.opponent?.image_url}
           />
           <Avatar.Title title={match?.opponents?.[1]?.opponent?.name} />
@@ -93,10 +99,7 @@ export function MatchCard({ match }: Props) {
       <Footer>
         <Avatar.Container position={'horizontal'}>
           <Avatar.Image image={match?.league?.image_url} />
-          <Avatar.Title
-            size={'sm'}
-            title={`${match.league.name}  ${match.serie.name ? ` | ${match?.serie?.name}` : ''}`}
-          />
+          <Avatar.Title size={'sm'} title={league} />
         </Avatar.Container>
       </Footer>
     </Container>

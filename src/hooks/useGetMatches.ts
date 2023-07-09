@@ -23,7 +23,7 @@ export type MatchProps = {
 
 export function useGetMatches() {
   const endpoint = 'https://api.pandascore.co/csgo/matches?sort=&page=1&per_page=10';
-  const { data, error, isLoading } = useSWR(endpoint, fetcher);
+  const { data, error, isLoading } = useSWR<MatchProps[]>(endpoint, fetcher);
 
   return {
     matches: data,

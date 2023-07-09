@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="chore: wip - Feed integrations">
-      <change afterPath="$PROJECT_DIR$/src/components/Placeholder.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PlaceholderUser.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useGetTeam.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayerCard/PlayerCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerCard/PlayerCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerCard/components/PlayerImage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Feed.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/Users/mateus.cc/Documents/workspace/CSTV",
+    "last_opened_file_path": "/Users/mateus.cc/Documents/workspace/CSTV/src/hooks",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -67,11 +68,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/hooks" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components/PlayerCard/components" />
       <recent name="$PROJECT_DIR$/src/components/Avatar" />
       <recent name="$PROJECT_DIR$/src/screen" />
-      <recent name="$PROJECT_DIR$/src/screens" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/@types" />

@@ -13,7 +13,7 @@ const Container = styled.View<Pick<Props, 'direction'>>`
     background-color: ${theme.colors.gray200};
     margin-bottom: 13px;
     padding: 8px 11px;
-    width: 50%;
+    width: 100%;
     max-height: 54px;
 
     ${direction === 'left' &&
