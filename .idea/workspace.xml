@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="refactor: imports, styled components position func, and types">
+    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="chore: hide empty data from API in useGetMatches.ts">
+      <change afterPath="$PROJECT_DIR$/src/components/Loading.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarImage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useGetMatches.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Feed.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +110,7 @@
     <MESSAGE value="chore: wip - Feed integrations" />
     <MESSAGE value="feat: add getTeam and update MatchDetails.tsx screen" />
     <MESSAGE value="refactor: imports, styled components position func, and types" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: imports, styled components position func, and types" />
+    <MESSAGE value="chore: hide empty data from API in useGetMatches.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: hide empty data from API in useGetMatches.ts" />
   </component>
 </project>
