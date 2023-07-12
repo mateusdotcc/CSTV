@@ -8,8 +8,8 @@ type Props = {
   image?: string | null;
 };
 
-const sm = '16px';
-const lg = '60px';
+const sm = 16;
+const lg = 60;
 
 export function AvatarImage({ image, size = 'small' }: Props) {
   const hasImage = Boolean(image);
@@ -37,8 +37,8 @@ type ContainerProps = Pick<Props, 'size'> & {
 const Container = styled.View<ContainerProps>`
   ${({ theme, size, hasImage }) => css`
     background-color: ${hasImage ? 'transparent' : theme.colors.gray100};
-    width: ${size === 'small' ? `${sm}` : `${lg}`};
-    height: ${size === 'small' ? `${sm}` : `${lg}`};
-    border-radius: 50%;
+    width: ${size === 'small' ? `${sm}` : `${lg}`}px;
+    height: ${size === 'small' ? `${sm}` : `${lg}`}px;
+    border-radius: ${size === 'small' ? Math.round(sm / 2) : Math.round(lg / 2)}px;
   `}
 `;

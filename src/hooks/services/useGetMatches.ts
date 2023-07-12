@@ -29,6 +29,7 @@ function sortByRunning(payload?: MatchProps[]) {
   return [...running, ...all];
 }
 
+// TODO: not used
 // I'm seeing a lot of matches without logo, and name being returned from API
 // I decided to clean these data
 function removeEmptyData(payload?: MatchProps[]) {
@@ -46,7 +47,7 @@ export function useGetMatches() {
   const { data, error, isLoading, mutate } = useSWR<MatchProps[]>(endpoint, fetcher);
 
   return {
-    matches: removeEmptyData(sortByRunning(data)),
+    matches: sortByRunning(data),
     isLoading,
     isError: error,
     mutate,

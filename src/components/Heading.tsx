@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components/native';
+import { Platform } from 'react-native';
 
 type Props = {
   text: string;
@@ -14,6 +15,7 @@ export function Heading({ text }: Props) {
 
 const Container = styled.View`
   ${({ theme }) => css`
+    margin-top: ${Platform.OS === 'android' ? '30px' : 0};
     padding: 10px ${theme.spaces.gutter}px ${theme.spaces.gutter}px ${theme.spaces.gutter}px;
   `}
 `;

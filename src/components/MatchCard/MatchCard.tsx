@@ -2,10 +2,10 @@ import { TouchableOpacityProps } from 'react-native';
 import styled, { css } from 'styled-components/native';
 import { rgba } from 'polished';
 import dayjs from 'dayjs';
-import { Avatar } from '@components/MatchCard/components/Avatar';
 import { useNav } from '@hooks/useNav';
 import { Vs } from '@components/Vs';
 import { MatchProps } from '@hooks/services/useGetMatches';
+import { Avatar } from './components/Avatar';
 
 require('dayjs/locale/pt-br');
 let utc = require('dayjs/plugin/utc');
@@ -17,7 +17,9 @@ type Props = {
 
 export function MatchCard({ match }: Props) {
   const navigation = useNav();
-  const league = `${match.league.name} ${match.serie.name ? ` | ${match?.serie?.name}` : ''}`;
+  const league = `${match?.league?.name} ${
+    Boolean(match?.serie?.name) ? ` | ${match?.serie?.name}` : ''
+  }`;
   const isRunning = match?.status === 'running';
   // @ts-ignore
   const beginAt = dayjs.utc(match?.begin_at).format('ddd, hh:mm');
@@ -25,18 +27,16 @@ export function MatchCard({ match }: Props) {
   function handlePress() {
     navigation.navigate('matchDetails', {
       league: { name: league },
-      beginAt: match?.begin_at,
+      beginAt: match?.begin_at ?? '-',
       opponents: match?.opponents,
     });
   }
 
   return (
     <Container onPress={handlePress}>
-      <Date isLive={isRunning}>
-        <DateText>{isRunning ? 'AGORA' : beginAt}</DateText>
-      </Date>
+      <Date isLive={isRunning}>{<DateText>{isRunning ? 'AGORA' : beginAt}</DateText>}</Date>
       <Content>
-        <Avatar.Container>
+        <Avatar.Container direction={'vertical'}>
           <Avatar.Image
             direction={'left'}
             size={'large'}
@@ -55,7 +55,7 @@ export function MatchCard({ match }: Props) {
         </Avatar.Container>
       </Content>
       <Footer>
-        <Avatar.Container position={'horizontal'}>
+        <Avatar.Container direction={'horizontal'}>
           <Avatar.Image image={match?.league?.image_url} />
           <Avatar.Title size={'sm'} title={league} />
         </Avatar.Container>

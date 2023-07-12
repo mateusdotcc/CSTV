@@ -80,7 +80,7 @@ $ npx expo start
 
 - [ ] Unit tests
 - [x] Code ready to run in iOS
-- [ ] Code ready to run in Android
+- [x] Code ready to run in Android
 - [ ] Pagination support
 - [ ] Responsiveness
 

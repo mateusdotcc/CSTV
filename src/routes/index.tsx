@@ -8,7 +8,7 @@ import { myTheme } from '@themes/index';
 export default function Routes() {
   return (
     <ThemeProvider theme={myTheme}>
-      <StatusBar translucent style="light" backgroundColor="transparent" />
+      <StatusBar translucent style="light" backgroundColor={myTheme.colors.black} />
       <Container>
         <NavigationContainer>
           <StackRoutes />

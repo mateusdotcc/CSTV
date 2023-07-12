@@ -19,10 +19,10 @@ export function MatchDetails({ navigation, route }: Props) {
   const { league, begin_at: beginAt, opponents } = route.params as MatchProps;
 
   const { team: leftTeam, isLoading: isLoadingLeftTeam } = useGetTeam({
-    teamId: opponents[0].opponent.id,
+    teamId: opponents?.[0]?.opponent.id,
   });
   const { team: rightTeam, isLoading: isLoadingRightTeam } = useGetTeam({
-    teamId: opponents[1].opponent.id,
+    teamId: opponents?.[1]?.opponent.id,
   });
 
   useEffect(function setNavigationHeader() {

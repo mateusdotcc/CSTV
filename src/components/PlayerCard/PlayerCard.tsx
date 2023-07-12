@@ -7,7 +7,7 @@ type Props = {
   direction: 'left' | 'right';
 };
 
-export function PlayerCard({ player, direction }: Props) {
+export function PlayerCard({ player, direction = 'left' }: Props) {
   return (
     <Container>
       <Player.Container direction={direction}>
