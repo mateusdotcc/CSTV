@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="feature: add android support">
-      <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
+    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="fix: [android] -  background flashing when switch screens">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: add stack navigation" />
     <MESSAGE value="feat: add Fonts" />
     <MESSAGE value="style: update code format" />
     <MESSAGE value="style: add prettier" />
@@ -113,6 +113,7 @@
     <MESSAGE value="doc: update README.md" />
     <MESSAGE value="doc: add step to copy .env.example file" />
     <MESSAGE value="feature: add android support" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: add android support" />
+    <MESSAGE value="fix: [android] -  background flashing when switch screens" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: [android] -  background flashing when switch screens" />
   </component>
 </project>
