@@ -1,4 +1,4 @@
-https://github.com/mateusdotcc/CSTV/assets/1136951/e6d94f71-53e3-4933-803b-fc1721b923f6
+https://github.com/mateusdotcc/CSTV/assets/1136951/614e96e2-3516-426d-8363-e25e241151ea
 
 <h1 align="center">React Native - CSTV</h1>
 <p align="center">Expo - Managed Workflow</p>
