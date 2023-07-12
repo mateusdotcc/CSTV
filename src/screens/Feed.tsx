@@ -35,7 +35,7 @@ export function Feed() {
           refreshing={refreshing}
           onRefresh={onRefresh}
           refreshControl={<RefreshLoader refreshing={refreshing} onRefresh={onRefresh} />}
-          renderItem={({ item }) => <MatchCard match={item} />}
+          renderItem={({ item, index }) => <MatchCard index={index} match={item} />}
         />
       )}
     </Container>

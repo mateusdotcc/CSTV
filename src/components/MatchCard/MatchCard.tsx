@@ -1,4 +1,5 @@
-import { TouchableOpacityProps } from 'react-native';
+import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
+import Animated, { FadeInDown } from 'react-native-reanimated';
 import styled, { css } from 'styled-components/native';
 import { rgba } from 'polished';
 import dayjs from 'dayjs';
@@ -12,10 +13,11 @@ let utc = require('dayjs/plugin/utc');
 dayjs.extend(utc).locale('pt-br');
 
 type Props = {
+  index: number;
   match: MatchProps;
 };
 
-export function MatchCard({ match }: Props) {
+export function MatchCard({ index, match }: Props) {
   const navigation = useNav();
   const league = `${match?.league?.name} ${
     Boolean(match?.serie?.name) ? ` | ${match?.serie?.name}` : ''
@@ -33,7 +35,7 @@ export function MatchCard({ match }: Props) {
   }
 
   return (
-    <Container onPress={handlePress}>
+    <Container entering={FadeInDown.delay(index * 100)} onPress={handlePress}>
       <Date isLive={isRunning}>{<DateText>{isRunning ? 'AGORA' : beginAt}</DateText>}</Date>
       <Content>
         <Avatar.Container direction={'vertical'}>
@@ -64,7 +66,9 @@ export function MatchCard({ match }: Props) {
   );
 }
 
-const Container = styled.TouchableOpacity.attrs<TouchableOpacityProps>({
+const TouchableOpacityAnimated = Animated.createAnimatedComponent(TouchableOpacity);
+
+const Container = styled(TouchableOpacityAnimated).attrs<TouchableOpacityProps>({
   activeOpacity: 0.85,
 })`
   ${({ theme }) => css`

@@ -53,7 +53,6 @@ export function MatchDetails({ navigation, route }: Props) {
           <Avatar.Title title={opponents?.[1]?.opponent?.name} />
         </Avatar.Container>
       </Header>
-      {}
       <Day>{dayjs(beginAt).format('dddd, hh:mm')}</Day>
       <ScrollView contentContainerStyle={styles.scrollList}>
         <FlatList
@@ -62,7 +61,9 @@ export function MatchDetails({ navigation, route }: Props) {
           scrollEnabled={false}
           showsVerticalScrollIndicator={false}
           keyExtractor={(player, index) => `${player?.id}-${index}`}
-          renderItem={({ item }) => <PlayerCard direction={'right'} player={item} />}
+          renderItem={({ item, index }) => (
+            <PlayerCard index={index} direction={'right'} player={item} />
+          )}
         />
         <FlatList
           style={styles.list}
@@ -70,7 +71,9 @@ export function MatchDetails({ navigation, route }: Props) {
           scrollEnabled={false}
           showsVerticalScrollIndicator={false}
           keyExtractor={(player, index) => `${player?.id}-${index}`}
-          renderItem={({ item }) => <PlayerCard direction={'left'} player={item} />}
+          renderItem={({ item, index }) => (
+            <PlayerCard index={index} direction={'left'} player={item} />
+          )}
         />
       </ScrollView>
     </Container>

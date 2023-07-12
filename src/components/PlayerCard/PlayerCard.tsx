@@ -1,15 +1,21 @@
+import { View } from 'react-native';
+import Animated, { FadeInLeft, FadeInRight } from 'react-native-reanimated';
 import styled from 'styled-components/native';
 import { Player } from '@components/PlayerCard/components';
 import { PlayerProps } from '@hooks/services/useGetTeam';
 
 type Props = {
+  index: number;
   player: PlayerProps;
   direction: 'left' | 'right';
 };
 
-export function PlayerCard({ player, direction = 'left' }: Props) {
+export function PlayerCard({ index, player, direction = 'left' }: Props) {
+  const animateIn =
+    direction === 'left' ? FadeInRight.delay(index * 100) : FadeInLeft.delay(index * 100);
+
   return (
-    <Container>
+    <Container entering={animateIn}>
       <Player.Container direction={direction}>
         {direction === 'left' && <Player.Image image={player?.image_url} />}
         <BoxInfo>
@@ -22,7 +28,9 @@ export function PlayerCard({ player, direction = 'left' }: Props) {
   );
 }
 
-const Container = styled.View`
+const ViewAnimated = Animated.createAnimatedComponent(View);
+
+const Container = styled(ViewAnimated)`
   flex-direction: row;
   justify-content: space-between;
   padding-top: 5px;

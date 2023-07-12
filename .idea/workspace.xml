@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="fix: [android] -  background flashing when switch screens">
+    <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="chore: update README.md with package versions and description">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayerCard/PlayerCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayerCard/PlayerCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Feed.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +21,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
@@ -89,8 +96,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: add Fonts" />
-    <MESSAGE value="style: update code format" />
     <MESSAGE value="style: add prettier" />
     <MESSAGE value="chore: update .idea files" />
     <MESSAGE value="chore: remove .idea folder" />
@@ -114,6 +119,20 @@
     <MESSAGE value="doc: add step to copy .env.example file" />
     <MESSAGE value="feature: add android support" />
     <MESSAGE value="fix: [android] -  background flashing when switch screens" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: [android] -  background flashing when switch screens" />
+    <MESSAGE value="chore: update README.md" />
+    <MESSAGE value="chore: update README.md with package versions and description" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update README.md with package versions and description" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx</url>
+          <line>38</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
