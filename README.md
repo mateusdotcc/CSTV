@@ -1,4 +1,4 @@
-https://github.com/mateusdotcc/CSTV/assets/1136951/614e96e2-3516-426d-8363-e25e241151ea
+https://github.com/mateusdotcc/CSTV/assets/1136951/1a9f516b-4850-4d65-a324-4d94243f8b68
 
 <h1 align="center">React Native - CSTV</h1>
 <p align="center">Expo - Managed Workflow</p>
@@ -73,6 +73,7 @@ Project is created with:
 - Expo Font (11.1.1)
 - React Navigation (6.1.7)
 - React Navigation Stack (6.3.17)
+- React Native Reanimated (2.14.4)
 - React Native SVG (13.4.9)
 - Dayjs (1.11.9)
 - Axios (1.4.0)
