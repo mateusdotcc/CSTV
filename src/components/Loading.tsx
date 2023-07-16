@@ -1,12 +1,14 @@
-import { ActivityIndicator } from 'react-native';
+import { ActivityIndicator, ActivityIndicatorProps } from 'react-native';
 import styled, { css, useTheme } from 'styled-components/native';
 
-export function Loading() {
+type Props = ActivityIndicatorProps & {};
+
+export function Loading(props: Props) {
   const { colors } = useTheme();
 
   return (
     <Container>
-      <ActivityIndicator size={'large'} color={colors.white} />
+      <ActivityIndicator size={'large'} color={colors.white} {...props} />
     </Container>
   );
 }

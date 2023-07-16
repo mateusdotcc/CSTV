@@ -1,8 +1,9 @@
+import { useEffect, useState } from 'react';
 import useSWR from 'swr';
 import { fetcher } from '@utils/fetcher';
-import { useState } from 'react';
 
 export type MatchProps = {
+  wasLoaded?: boolean; // flag to check if the card came from paging
   begin_at: string;
   league_id: number;
   status: 'canceled' | 'finished' | 'not_started' | 'postponed' | 'running';
@@ -23,34 +24,41 @@ export type MatchProps = {
   }[];
 };
 
+const initialPage = 1;
+
 function sortByRunning(payload?: MatchProps[]) {
   const running = payload?.filter((match) => match.status === 'running') ?? [];
   const all = payload?.filter((match) => match.status !== 'running') ?? [];
   return [...running, ...all];
 }
 
-// TODO: not used
-// I'm seeing a lot of matches without logo, and name being returned from API
-// I decided to clean these data
-function removeEmptyData(payload?: MatchProps[]) {
-  return payload?.filter(
-    (match) =>
-      Boolean(match?.league?.image_url) &&
-      Boolean(match?.opponents[0]?.opponent?.image_url) &&
-      Boolean(match?.opponents[1]?.opponent?.image_url),
-  );
-}
-
 export function useGetMatches() {
-  const [page, setPage] = useState(1);
-  const endpoint = `https://api.pandascore.co/csgo/matches?page=${page}&per_page=10`;
+  const [page, setPage] = useState(initialPage);
+  const [matches, setMatches] = useState<MatchProps[]>([]);
+
+  const endpoint = `https://api.pandascore.co/csgo/matches?page=${page}&per_page=5`;
+
   const { data, error, isLoading, mutate } = useSWR<MatchProps[]>(endpoint, fetcher);
 
+  function dispose() {
+    setPage(initialPage);
+    setMatches([]);
+  }
+
+  useEffect(
+    function updateListData() {
+      const mergeData = sortByRunning([...matches, ...(data! ?? [])]);
+      setMatches(mergeData.map((item) => ({ ...item, wasLoaded: page >= 3 })));
+    },
+    [page, data],
+  );
+
   return {
-    matches: sortByRunning(data),
+    matches,
     isLoading,
     isError: error,
     mutate,
+    dispose,
     setPage,
   };
 }

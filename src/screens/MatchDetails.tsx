@@ -40,7 +40,11 @@ export function MatchDetails({ navigation, route }: Props) {
     <Container>
       <Header>
         <Avatar.Container>
-          <Avatar.Image size={'large'} image={opponents?.[0]?.opponent?.image_url} />
+          <Avatar.Image
+            direction={'left'}
+            size={'large'}
+            image={opponents?.[0]?.opponent?.image_url}
+          />
           <Avatar.Title title={opponents?.[0]?.opponent?.name} />
         </Avatar.Container>
         <Vs />

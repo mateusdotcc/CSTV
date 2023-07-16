@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import styled, { css } from 'styled-components/native';
@@ -17,11 +18,10 @@ type Props = {
   match: MatchProps;
 };
 
-export function MatchCard({ index, match }: Props) {
+function MatchCard({ index, match }: Props) {
   const navigation = useNav();
-  const league = `${match?.league?.name} ${
-    Boolean(match?.serie?.name) ? ` | ${match?.serie?.name}` : ''
-  }`;
+  // prettier-ignore
+  const league = `${match?.league?.name} ${Boolean(match?.serie?.name) ? ` | ${match?.serie?.name}` : ''}`;
   const isRunning = match?.status === 'running';
   // @ts-ignore
   const beginAt = dayjs.utc(match?.begin_at).format('ddd, hh:mm');
@@ -34,8 +34,10 @@ export function MatchCard({ index, match }: Props) {
     });
   }
 
+  const animationIn = FadeInDown.delay(match?.wasLoaded ? 0 : index * 100);
+
   return (
-    <Container entering={FadeInDown.delay(index * 100)} onPress={handlePress}>
+    <Container entering={animationIn} onPress={handlePress}>
       <Date isLive={isRunning}>{<DateText>{isRunning ? 'AGORA' : beginAt}</DateText>}</Date>
       <Content>
         <Avatar.Container direction={'vertical'}>
@@ -65,6 +67,8 @@ export function MatchCard({ index, match }: Props) {
     </Container>
   );
 }
+
+export default memo(MatchCard);
 
 const TouchableOpacityAnimated = Animated.createAnimatedComponent(TouchableOpacity);
 

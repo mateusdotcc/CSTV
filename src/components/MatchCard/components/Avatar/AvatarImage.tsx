@@ -11,7 +11,7 @@ type Props = {
 const sm = 16;
 const lg = 60;
 
-export function AvatarImage({ image, size = 'small' }: Props) {
+export function AvatarImage({ image, direction, size = 'small' }: Props) {
   const hasImage = Boolean(image);
 
   return (
@@ -24,7 +24,13 @@ export function AvatarImage({ image, size = 'small' }: Props) {
           source={image}
         />
       ) : (
-        <>{size === 'large' && <Placeholder />}</>
+        <>
+          {size === 'large' && (
+            <BoxPlaceholder direction={direction}>
+              <Placeholder />
+            </BoxPlaceholder>
+          )}
+        </>
       )}
     </Container>
   );
@@ -40,5 +46,17 @@ const Container = styled.View<ContainerProps>`
     width: ${size === 'small' ? `${sm}` : `${lg}`}px;
     height: ${size === 'small' ? `${sm}` : `${lg}`}px;
     border-radius: ${size === 'small' ? Math.round(sm / 2) : Math.round(lg / 2)}px;
+  `}
+`;
+
+const BoxPlaceholder = styled.View<Pick<Props, 'direction'>>`
+  ${({ direction }) => css`
+    width: 100%;
+    height: 100%;
+    
+    ${direction === 'left' &&
+    css`
+      transform: scaleX(-1);
+    `}
   `}
 `;
