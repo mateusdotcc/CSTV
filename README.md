@@ -1,4 +1,5 @@
-https://github.com/mateusdotcc/CSTV/assets/1136951/1a9f516b-4850-4d65-a324-4d94243f8b68
+https://github.com/mateusdotcc/CSTV/assets/1136951/24ccd4eb-7d3c-435a-a091-a7cc21056b8c
+
 
 <h1 align="center">React Native - CSTV</h1>
 <p align="center">Expo - Managed Workflow</p>
@@ -88,7 +89,7 @@ Project is created with:
 - [ ] Unit tests
 - [x] Code ready to run in iOS
 - [x] Code ready to run in Android
-- [ ] Pagination support
+- [x] Pagination support
 - [ ] Responsiveness
 
 ### Connect with me:
