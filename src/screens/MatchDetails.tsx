@@ -58,7 +58,7 @@ export function MatchDetails({ navigation, route }: Props) {
         </Avatar.Container>
       </Header>
       <Day>{dayjs(beginAt).format('dddd, hh:mm')}</Day>
-      <ScrollView contentContainerStyle={styles.scrollList}>
+      <ScrollView contentContainerStyle={styles.scrollList} showsVerticalScrollIndicator={false}>
         <FlatList
           style={styles.list}
           data={leftTeam?.players}
@@ -86,7 +86,6 @@ export function MatchDetails({ navigation, route }: Props) {
 
 const styles = StyleSheet.create({
   scrollList: {
-    flex: 1,
     gap: 13,
     flexDirection: 'row',
   },

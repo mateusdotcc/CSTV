@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ecdca44c-1b6f-4f44-9ebc-7da77ad439bd" name="Changes" comment="feat: add animations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Loading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/MatchCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MatchCard/components/Avatar/AvatarImage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/services/useGetMatches.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/services/useGetMatches.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Feed.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MatchDetails.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,9 +17,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mateusdotcc"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/mateusdotcc/CSTV.git",
+    "accountId": "eb8f592b-ddbe-43a6-8a9d-ca90d2aa5f00"
+  }
+}]]></component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGrunt">
       <scroll-view-position x="0" y="0" />
@@ -36,33 +43,47 @@
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2SFCggGGJORzoJsFovGUN5Q12BI" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mateus.cc/Documents/workspace/CSTV&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/mateus.cc/Documents/workspace/CSTV/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/mateus.cc/Documents/workspace/CSTV/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/mateus.cc/Documents/workspace/CSTV",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/mateus.cc/Documents/workspace/CSTV/node_modules/prettier",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "ts.external.directory.path": "/Users/mateus.cc/workspace/CSTV/node_modules/typescript/lib"
   }
-}</component>
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets" />
@@ -78,6 +99,18 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="npm start" />
+    </option>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
